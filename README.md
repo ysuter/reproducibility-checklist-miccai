@@ -37,12 +37,12 @@ The code and model can be containerized in a Docker. Docker containerization is 
 
 * Docker Command: an example for segmentation application:
 
-  *   _CONTAINERID=`docker run -dit -v [TEST-DIR]:/input:ro -v /output docker_application_name`_
-  *   `_docker exec $CONTAINERID python train.py_`
-  *   `_docker exec $CONTAINERID python eval.py_`
-  *   `_docker cp $CONTAINERID:/output /local/path/output/saveresult_`
-  *   `_docker stop $CONTAINERID_`
-  *   `_docker rm -v $CONTAINERID_`
+  *   `CONTAINERID=docker run -dit -v [TEST-DIR]:/input:ro -v /output docker_application_name`
+  *   `docker exec $CONTAINERID python train.py`
+  *   `docker exec $CONTAINERID python eval.py`
+  *   `docker cp $CONTAINERID:/output /local/path/output/saveresult`
+  *   `docker stop $CONTAINERID`
+  *   `docker rm -v $CONTAINERID`
 
 * Example for building a Docker for segmentation:
 
